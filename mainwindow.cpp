@@ -471,6 +471,16 @@ void MainWindow::on_done_clicked()
     ui->groupholes->hide();
     ui->groupBox_2->show();
 
+    std::sort(holes.begin(), holes.end(), compareBase);
+    for (int i=0;i<holes.size()-1;i++)
+    {
+        if(holes[i].End()==holes[i+1].base)
+        {
+            holes[i].limit+=holes[i+1].limit;
+            holes.erase(holes.begin()+i+1);
+            i--;
+        }
+    }
   //  memory_size= ui->memorysize->value();
 
     //hena di 7esbet elused w hatethom f vector used

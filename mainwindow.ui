@@ -29,10 +29,10 @@
     <widget class="QToolButton" name="update">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>250</x>
        <y>180</y>
-       <width>61</width>
-       <height>19</height>
+       <width>81</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
