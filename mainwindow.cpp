@@ -267,6 +267,8 @@ void MainWindow::on_update_clicked()
    l.base=ui->base->value();
    l.limit=ui->limit->value();
    holes.push_back(l);
+   ui->base->clear();
+   ui->limit->clear();
    memory_size= ui->memorysize->value();
    holes_base.push_back(ui->base->value());
    holes_limit.push_back(ui->limit->value());
@@ -388,7 +390,7 @@ void MainWindow::on_update_2_clicked()
 
 void MainWindow:: draw( QVector<location> holes , QVector<location> used)
 {
-    int height=650;
+    float height=650;
     float factor=height/memory_size;
     scene= new QGraphicsScene();
     ui->graphicsView->setScene(scene);
